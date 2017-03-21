@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="uikit.min.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="jquery.min.js"></script>
+  <script src="vue.min.js"></script>
+  <script src="uikit.min.js"></script>
+  <script src="uikit-icons.min.js"></script>
+  <script src="firebase.js"></script>
+</head>
+
+<body id='sdextension' class="uk-text-small">
+  <nav id='header' class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar="">
+    <div class="uk-navbar-left">
+      <div class="uk-navbar-item">
+        <div id="identity">
+          <a :href="url" target="_new">{{name}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="uk-navbar-right">
+      <div class="uk-navbar-item">
+        <div id="version">
+          <a :href="url" target="_new">version {{name}}</a>
+        </div>
+        <button id="sdrefresh" class="uk-margin-left" uk-icon="icon: refresh; ratio: .75"></button>
+      </div>
+  </nav>
+  <div id='bookmarks'>
+    <div class="uk-child-width-1-2 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
+      <card title="Base" cat="green" :content="Base"></card>
+      <card title="Doc" cat="red" :content="Doc"></card>
+    </div>
+    <div class="uk-child-width-1-1 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
+      <card title="People" cat="blue" :content="People"></card>
+    </div>
+    <div class="uk-child-width-1-2 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
+      <card title="Community" cat="green" :content="Community"></card>
+      <card title="Tools" cat="blue" :content="People"></card>
+    </div>
+  </div><br/>
+  <script src="popup.js"></script>
+</body>
+
+</html>
