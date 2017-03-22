@@ -1,67 +1,69 @@
-body#sdextension {
+body#qmextension {
   width: 400px;
+  min-height: 330px;
   background: ghostwhite;
 }
 
-body#sdextension .uk-grid-small {
+body#qmextension .uk-grid-small {
   margin-left: 0px;
 }
 
-body#sdextension #header a {
-    color: black;
-    cursor: pointer;
+body#qmextension #header a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-body#sdextension .uk-navbar {
+body#qmextension .uk-navbar {
   height: 24px;
   margin-left: 0px;
   font-weight: bold;
 }
 
-body#sdextension #bookmarks{
+body#qmextension #bookmarks {
   margin-top: 6px;
 }
 
-body#sdextension .uk-card .uk-list {
+body#qmextension .uk-card .uk-list {
   line-height: 1.0;
   margin-top: 6px;
   margin-left: 14px;
 }
 
-body#sdextension .uk-card .uk-list img {
+body#qmextension .uk-card .uk-list img {
   width: 10px;
   float: right;
 }
 
-body#sdextension .uk-card-body {
+body#qmextension .uk-card-body {
   padding: 4px 6px 6px 6px;
   font-size: 80%;
   margin-right: 16px;
 }
 
-body#sdextension .uk-card-title {
+body#qmextension .uk-card-title {
   font-size: .90rem;
   font-weight: bold;
   text-decoration: underline;
   margin-left: 10px;
 }
 
-body#sdextension .uk-card-title.red {
+body#qmextension .uk-card-title.red {
   color: red;
-  /*text-shadow: 0px 0px 1px white, 2px 1px 2px red;*/
 }
 
-body#sdextension .uk-card-title.green {
+body#qmextension .uk-card-title.green {
   color: green;
-  /*text-shadow: 0px 0px 1px white, 2px 1px 2px green;*/
 }
 
-body#sdextension .uk-card-title.yellow {
+body#qmextension .uk-card-title.yellow {
   color: darkgoldenrod;
-  /*text-shadow: 1px 0px 1px white, 2px 1px 2px darkgoldenrod;*/
 }
 
-body#sdextension .uk-card-title.blue {
+body#qmextension .uk-card-title.blue {
   color: dodgerblue;
-  /*text-shadow: 1px 0px 1px white, 2px 1px 2px dodgerblue;*/
+}
+
+body#qmextension #settings form input {
+  width: 364px;
 }

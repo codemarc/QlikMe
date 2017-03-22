@@ -1,16 +1,48 @@
 'use strict';
+var skey = "QlikMe";
+var surl = "QlikSrv";
 
 $(window).on('load', function () {
 
-  $('#sdrefresh').on('click', (e) => { localStorage.clear(); chrome.runtime.reload(); });
+  $('#qmrefresh').on('click', (e) => { localStorage.removeItem(skey); chrome.runtime.reload(); });
+
+  $('#qmsettings').on('click', (e) => {
+    if ($('#settings').hasClass('uk-hidden')) {
+      let s=localStorage.getItem(surl);
+      if (s != null)$('#surl').val(s);
+      $('#bookmarks').addClass('uk-hidden');
+      $('#settings').removeClass('uk-hidden');
+    } else {
+      $('#bookmarks').removeClass('uk-hidden');
+      $('#settings').addClass('uk-hidden');
+    }
+  });
+
+  $('#qmset').on('click', (e) => {
+    localStorage.setItem(surl,$('#surl').val());
+  });
+
+  $('#qmclear').on('click', (e) => {
+    e.preventDefault();
+    $('#surl').val(localStorage.removeItem(surl));
+    return false;
+  });
 
   Vue.component('card-item', {
     props: ['card'],
+    computed: {
+      prefixed: function () {
+        let s=localStorage.getItem(surl);
+        return ((s==null || s=='')?'http://localhost':s)+this.card.url;
+    }
+  },
     template: `
       <li>
-        <a :href="card.url" target="_new">
+        <a v-if="card.offsite" :href="prefixed" target="_new">
+            {{card.name}}
+        </a>
+        <a v-else :href="card.url" target="_new">
           {{card.name}}
-          <img v-if="card.offsite" src="external-link-icon.png" class="icon"></img>
         </a>
       </li>`
   });
@@ -32,18 +64,18 @@ $(window).on('load', function () {
   new Vue({
     data: {
       name: chrome.runtime.getManifest().name,
-      url: chrome.runtime.getManifest().author.firebase.console,
+      url: chrome.runtime.getManifest().author.info.web,
     }, el: '#identity'
   });
 
   new Vue({
     data: {
       name: chrome.runtime.getManifest().version,
-      url:  'https://chrome.google.com/webstore/detail/smash-data-links/cdkaahilodclnbkjdhidkdhpimlhnndh'
+      url: 'https://chrome.google.com/webstore/detail/qlikme-links/cbbiccimdggcklmoagfalppgjijacajj',
     }, el: '#version'
   });
 
-  var lsData = localStorage.getItem('BookMarcs');
+  var lsData = localStorage.getItem(skey);
   if (lsData != null) {
 
     new Vue({
@@ -56,7 +88,7 @@ $(window).on('load', function () {
     firebase.initializeApp(chrome.runtime.getManifest().author.firebase.config);
     firebase.database().ref('/').once('value').then(function (snapshot) {
       new Vue({
-        data: function () { return (localStorage.setItem('BookMarcs', JSON.stringify(lsData = snapshot.val())), lsData); },
+        data: function () { return (localStorage.setItem(skey, JSON.stringify(lsData = snapshot.val())), lsData); },
         el: '#bookmarks'
       });
     });

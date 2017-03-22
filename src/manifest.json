@@ -40,12 +40,11 @@
   "author": {
     "info": {
       "name": "Marc J. Greenberg",
-      "company": "Smash Data, Inc.",
-      "email": "Marc J. Greenberg <mgreenberg@smashdatainc.com>",
-      "phone": "516-313-4826"
+      "email": "mailto:codemarc@gmail.com",
+      "web":"http://codemarc.net"
     },
     "firebase": {
-      "console": "https://console.firebase.google.com/project/smashdata-4b8ee/database/data",
+      "console": "https://console.firebase.google.com/project/qlikme-99653/database/data",
       "config": {
         "apiKey": "AIzaSyDR7Ee03A3qyOnBuYzbNFbew6A70c9acng",
         "authDomain": "qlikme-99653.firebaseapp.com",

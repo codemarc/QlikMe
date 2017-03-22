@@ -2,19 +2,18 @@
   "Base": [
     {
       "name": "Qlik Management Console",
-      "url": "https://qlik.buildinglink.com/qmc"
+      "url": "/qmc",
+      "offsite": true
     },
     {
       "name": "Qlik Sense Hub",
-      "url": "https://qlik.buildinglink.com/hub"
+      "url": "/hub",
+      "offsite": true
     },
     {
       "name": "Qlik Dev Hub",
-      "url": "https://qlik.buildinglink.com/dev-hub/"
-    },
-    {
-      "name": "Qlik Branch",
-      "url": "http://branch.qlik.com/"
+      "url": "/dev-hub/",
+      "offsite": true
     }
   ],
   "People": [
@@ -23,7 +22,21 @@
       "url": "https://gist.github.com/codemarc/8d300390aa06de0a66891bac145d54c1"
     }
   ],
+  "Events": [
+    {
+      "name": "Qlikqonnections",
+      "url": "http://www.qlikqonnections.com/"
+    }
+  ],
   "Tools": [
+    {
+      "name": "Qlik Branch",
+      "url": "http://branch.qlik.com/"
+    },
+    {
+      "name": "Awesome Qlik",
+      "url": "https://github.com/stefanwalther/awesome-qap"
+    },
     {
       "name": "Set Analysis Wizard",
       "url": "http://tools.qlikblog.at/SetAnalysisWizard/QlikView-SetAnalysis_Wizard_and_Generator.aspx"
@@ -57,11 +70,7 @@
       "url": "http://livingqlikview.com/"
     },
     {
-      "name": "Awesome Qlik",
-      "url": "https://github.com/stefanwalther/awesome-qap"
-    },
-    {
-      "name": "qliksite.io",
+      "name": "Qliksite.io",
       "url": "http://qliksite.io"
     }
   ]

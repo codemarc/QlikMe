@@ -10,7 +10,7 @@
   <script src="firebase.js"></script>
 </head>
 
-<body id='sdextension' class="uk-text-small">
+<body id='qmextension' class="uk-text-small">
   <nav id='header' class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar="">
     <div class="uk-navbar-left">
       <div class="uk-navbar-item">
@@ -24,23 +24,43 @@
         <div id="version">
           <a :href="url" target="_new">version {{name}}</a>
         </div>
-        <button id="sdrefresh" class="uk-margin-left" uk-icon="icon: refresh; ratio: .75"></button>
+        <button id="qmrefresh" class="uk-margin-left" uk-icon="icon: refresh; ratio: .75"></button>
+        <button id="qmsettings" uk-icon="icon: settings; ratio: .75"></button>
       </div>
   </nav>
   <div id='bookmarks'>
     <div class="uk-child-width-1-2 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
-      <card title="Base" cat="green" :content="Base"></card>
-      <card title="Doc" cat="red" :content="Doc"></card>
-    </div>
-    <div class="uk-child-width-1-1 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
-      <card title="People" cat="blue" :content="People"></card>
-    </div>
-    <div class="uk-child-width-1-2 uk-grid-small uk-grid-match uk-width-auto" uk-grid>
+      <card title="Sense" cat="green" :content="Base"></card>
+      <card title="Doc" cat="green" :content="Doc"></card>
       <card title="Community" cat="green" :content="Community"></card>
-      <card title="Tools" cat="blue" :content="People"></card>
+      <card title="Tools" cat="green" :content="Tools"></card>
+      <card title="People" cat="green" :content="People"></card>
+      <card title="Events" cat="green" :content="Events"></card>
     </div>
-  </div><br/>
-  <script src="popup.js"></script>
+  </div>
+  <div id='settings' class="uk-hidden">
+    <hr/>
+    <form>
+      <div class="uk-margin">
+        <label class="uk-form-label uk-margin-left" for="form-stacked-text">Qlik Sense Url</label>
+        <div class="uk-form-controls">
+          <div class="uk-inline uk-margin-left">
+            <a class="uk-form-icon uk-form-icon" href="" uk-icon="icon: desktop"></a>
+            <input id="surl" class="uk-input" type="text" placeholder="http://localhost" value="">
+          </div>
+        </div>
+        <div class="uk-form-controls">
+          <div class="uk-float-right">
+            <button id="qmset" class="uk-button  uk-button-small uk-button-primary uk-float-right uk-margin-top uk-margin-right">Apply</button>
+            <button id="qmclear" class="uk-button  uk-button-small uk-button-default uk-float-right uk-margin-top uk-margin-right">Clear</button>
+          </div>
+        </div>
+    </form>
+    </div>
+
+
+    <br/>
+    <script src="popup.js"></script>
 </body>
 
 </html>
