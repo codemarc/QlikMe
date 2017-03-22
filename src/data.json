@@ -22,6 +22,16 @@
       "url": "https://gist.github.com/codemarc/8d300390aa06de0a66891bac145d54c1"
     }
   ],
+  "Demos": [
+    {
+      "name": "Qlik Demos",
+      "url": "http://us-b.demo.qlik.com/"
+    },
+    {
+      "name": "Qlik + Cloudera",
+      "url": "http://cloudera.qlik.com/"
+    }
+  ],
   "Events": [
     {
       "name": "Qlikqonnections",
@@ -54,16 +64,16 @@
     {
       "name": "Qlik Api Reference",
       "url": "https://help.qlik.com/en-US/sense-developer/3.1/Content/APIs-and-SDKs.htm"
+    },
+    {
+      "name": "Marc's Qlik Gists",
+      "url": "https://gist.github.com/codemarc/8d300390aa06de0a66891bac145d54c1"
     }
   ],
   "Community": [
     {
       "name": "Qlik Community",
       "url": "https://community.qlik.com/community/qlik-sense/new-to-qlik-sense"
-    },
-    {
-      "name": "Qlik Demos",
-      "url": "http://us-b.demo.qlik.com/"
     },
     {
       "name": "Living Qlik",
