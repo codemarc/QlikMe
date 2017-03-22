@@ -1,4 +1,4 @@
-<project name="QlikMe " xmlns:if="ant:if" xmlns:unless="ant:unless" default="zipit" basedir=".">
+<project name="QlikMe" xmlns:if="ant:if" xmlns:unless="ant:unless" default="zipit" basedir=".">
 
 <!-- Calculate OS Specific Properties -->
 <condition property="onmac">
