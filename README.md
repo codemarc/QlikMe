@@ -1,10 +1,7 @@
 # QlikMe #
 
-This project generates chrome extension that provides a set of interesting Qlik links. 
-This project requires the uses jquery, vue.js, uikit, firebase.
-
-I use ant as a build tool for convenience only
-
+This project generates chrome extension that provides a set of interesting Qlik links. It uses jquery, vue.js, uikit, and firebase
+oh yes and any as a build tool cause it was handy.
 
 ## Changelog
 
