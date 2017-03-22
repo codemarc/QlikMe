@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "QlikMe Links",
   "short_name": "QlikMe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Important Qlik Links",
   "homepage_url": "http://codemarc.net",
   "content_scripts": [
